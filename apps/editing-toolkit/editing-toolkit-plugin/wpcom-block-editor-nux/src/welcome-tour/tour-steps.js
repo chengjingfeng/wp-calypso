@@ -72,6 +72,7 @@ const referenceElements = [
 function getTourSteps( localeSlug, referencePositioning ) {
 	return [
 		{
+			id: 'welcome',
 			referenceElements: referencePositioning && referenceElements[ 0 ],
 			meta: {
 				heading: __( 'Welcome to WordPress!', 'full-site-editing' ),
@@ -85,6 +86,7 @@ function getTourSteps( localeSlug, referencePositioning ) {
 			},
 		},
 		{
+			id: 'allBlocks',
 			referenceElements: referencePositioning && referenceElements[ 1 ],
 			meta: {
 				heading: __( 'Everything is a block', 'full-site-editing' ),
@@ -97,6 +99,7 @@ function getTourSteps( localeSlug, referencePositioning ) {
 			},
 		},
 		{
+			id: 'addBlock',
 			referenceElements: referencePositioning && referenceElements[ 2 ],
 			meta: {
 				heading: __( 'Adding a new block', 'full-site-editing' ),
@@ -110,6 +113,7 @@ function getTourSteps( localeSlug, referencePositioning ) {
 			},
 		},
 		{
+			id: 'makeBold',
 			referenceElements: referencePositioning && referenceElements[ 3 ],
 			meta: {
 				heading: __( 'Click a block to change it', 'full-site-editing' ),
@@ -122,6 +126,7 @@ function getTourSteps( localeSlug, referencePositioning ) {
 			},
 		},
 		{
+			id: 'moreOptions',
 			referenceElements: referencePositioning && referenceElements[ 4 ],
 			meta: {
 				heading: __( 'More Options', 'full-site-editing' ),
@@ -132,6 +137,7 @@ function getTourSteps( localeSlug, referencePositioning ) {
 			},
 		},
 		{
+			id: 'undo',
 			referenceElements: referencePositioning && referenceElements[ 5 ],
 			meta: {
 				heading: __( 'Undo any mistake', 'full-site-editing' ),
@@ -142,6 +148,7 @@ function getTourSteps( localeSlug, referencePositioning ) {
 			},
 		},
 		{
+			id: 'moveBlock',
 			referenceElements: referencePositioning && referenceElements[ 6 ],
 			meta: {
 				heading: __( 'Drag & drop', 'full-site-editing' ),
@@ -152,6 +159,7 @@ function getTourSteps( localeSlug, referencePositioning ) {
 			},
 		},
 		{
+			id: 'finish',
 			referenceElements: referencePositioning && referenceElements[ 7 ],
 			meta: {
 				heading: __( 'Congratulations!', 'full-site-editing' ),
