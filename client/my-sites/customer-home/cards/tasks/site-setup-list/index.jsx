@@ -218,6 +218,8 @@ const SiteSetupList = ( {
 		}
 	};
 
+	let isMobileAppTaskCompleted = false;
+
 	return (
 		<Card className={ classnames( 'site-setup-list', { 'is-loading': isLoading } ) }>
 			{ isLoading && <Spinner /> }
@@ -255,6 +257,10 @@ const SiteSetupList = ( {
 						const enhancedTask = getTask( task );
 						const isCurrent = task.id === currentTask.id;
 						const isCompleted = task.isCompleted;
+
+						if ( task.id === CHECKLIST_KNOWN_TASKS.MOBILE_APP_INSTALLED ) {
+							isMobileAppTaskCompleted = isCompleted;
+						}
 
 						return (
 							<li key={ task.id } className={ `site-setup-list__task-${ task.id }` }>
@@ -311,7 +317,7 @@ const SiteSetupList = ( {
 						);
 					} ) }
 				</ul>
-				<MobileAppDownload />
+				{ ! isMobileAppTaskCompleted && <MobileAppDownload /> }
 			</div>
 		</Card>
 	);
